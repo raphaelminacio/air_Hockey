@@ -60,7 +60,7 @@
                                 <color key="backgroundColor" red="0.68610638380050659" green="0.11941007524728775" blue="0.17777782678604126" alpha="0.74744168133802813" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRw-aM-0zT" userLabel="balle" customClass="DesignableView" customModule="air_Hockey" customModuleProvider="target">
-                                <rect key="frame" x="228" y="240" width="40" height="40"/>
+                                <rect key="frame" x="228" y="240" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>

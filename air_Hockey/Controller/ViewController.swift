@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         objet_bounce = Bounce(ball: balle, left_window: mur_gauche, right_window: mur_droite, top_window: mur_haut, bottom_window: mur_bas)
         
-        balle.layer.cornerRadius = 12.5
         lancerAnimation()
     }
     //---
@@ -38,8 +37,21 @@ class ViewController: UIViewController {
         balle.center.x += CGFloat(cos)
         balle.center.y += CGFloat(sin)
         
+        if balle.frame.intersects(game_over.frame) {
+            aTimer.invalidate()
+            aTimer = nil
+        }
+        
         sin = objet_bounce.returnCosSinAfterTouch(sin: sin, cos: cos)[0]
         cos = objet_bounce.returnCosSinAfterTouch(sin: sin, cos: cos)[1]
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        let touch: UITouch = touches.first!
+        if touch.view == finger_mover {
+            finger_mover.center.x = touch.location(in: self.view).x
+            mur_bas.center.x = finger_mover.center.x
+        }
     }
     //---
 }
