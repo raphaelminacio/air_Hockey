@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         objet_bounce = Bounce(ball: balle, left_window: mur_gauche, right_window: mur_droite, top_window: mur_haut, bottom_window: mur_bas, bottom_window1: mur_bas1, bottom_window2: mur_bas2)
         
         lancerAnimation()
+        
+        balle.center.x = UIScreen.main.bounds.width / 2
+        balle.center.y = UIScreen.main.bounds.height / 4
     }
     //---
     func lancerAnimation() {
@@ -31,7 +34,7 @@ class ViewController: UIViewController {
         print(degrees)
         cos = __cospi(degrees/180)
         sin = __sinpi(degrees/180)
-        aTimer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(animation), userInfo: nil, repeats: true)
+        aTimer = Timer.scheduledTimer(timeInterval: 0.002, target: self, selector: #selector(animation), userInfo: nil, repeats: true)
         
     }
     //---

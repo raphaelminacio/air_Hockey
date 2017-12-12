@@ -45,6 +45,14 @@ class Bounce {
             let n = (d) * -1
             d = n
         }
+        if b.frame.intersects(bw1.frame) {
+            let n = (d) * -1
+            d = n
+        }
+        if b.frame.intersects(bw2.frame) {
+            let n = (d) * -1
+            d = n
+        }
         return [__sinpi(Double(d/180.0)), __cospi(Double(d/180.0))]
     }
     //--------------------------------------------------
