@@ -8,6 +8,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var balle: UIView!
     @IBOutlet weak var finger_mover: UIView!
     @IBOutlet weak var game_over: UIView!
+    @IBOutlet weak var mur_bas1: UIView!
+    @IBOutlet weak var mur_bas2: UIView!
     //---
     var objet_bounce: Bounce!
     var cos: Double!
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        objet_bounce = Bounce(ball: balle, left_window: mur_gauche, right_window: mur_droite, top_window: mur_haut, bottom_window: mur_bas)
+        objet_bounce = Bounce(ball: balle, left_window: mur_gauche, right_window: mur_droite, top_window: mur_haut, bottom_window: mur_bas, bottom_window1: mur_bas1, bottom_window2: mur_bas2)
         
         lancerAnimation()
     }

@@ -65,9 +65,19 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="12.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-VW-Z75" userLabel="murBas1">
+                                <rect key="frame" x="5" y="621" width="45" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82495415210723877" green="0.11618814617395401" blue="0.09161677211523056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfI-mn-7pw" userLabel="murBas2">
+                                <rect key="frame" x="322" y="621" width="48" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8249541521" green="0.11618814619999999" blue="0.091616772119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,6 +88,8 @@
                         <outlet property="finger_mover" destination="8KP-L3-aGa" id="uXa-gW-NMi"/>
                         <outlet property="game_over" destination="LCR-Ud-FU3" id="HlK-tx-jUC"/>
                         <outlet property="mur_bas" destination="wE8-NW-WeF" id="Dbb-4I-lyt"/>
+                        <outlet property="mur_bas1" destination="aoa-VW-Z75" id="pkH-pF-4qM"/>
+                        <outlet property="mur_bas2" destination="MfI-mn-7pw" id="Mgp-fo-OPo"/>
                         <outlet property="mur_droite" destination="Fpf-XC-X19" id="CY9-Ye-U24"/>
                         <outlet property="mur_gauche" destination="C44-Sr-fRZ" id="tnF-rN-VCq"/>
                         <outlet property="mur_haut" destination="SKM-Q7-vdT" id="0k8-DC-co7"/>
