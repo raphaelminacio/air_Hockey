@@ -13,6 +13,9 @@ class Bounce {
     var bw: UIView!
     var bw1: UIView!
     var bw2: UIView!
+    var car1: UIView!
+    var car2: UIView!
+    var car3: UIView!
     //--------------------------------------------------
     init(ball b: UIView,
          left_window lw: UIView,
@@ -20,7 +23,10 @@ class Bounce {
          top_window tw: UIView,
          bottom_window bw: UIView,
          bottom_window1 bw1: UIView,
-         bottom_window2 bw2: UIView) {
+         bottom_window2 bw2: UIView,
+         square1 car1: UIView,
+         square2 car2: UIView,
+         square3 car3: UIView) {
         self.b = b
         self.lw = lw
         self.rw = rw
@@ -28,6 +34,9 @@ class Bounce {
         self.bw = bw
         self.bw1 = bw1
         self.bw2 = bw2
+        self.car1 = car1
+        self.car2 = car2
+        self.car3 = car3
         
     }
     //--------------------------------------------------
@@ -46,12 +55,24 @@ class Bounce {
             d = n
         }
         if b.frame.intersects(bw1.frame) {
-            let n = (d) * -1
-            d = n
+            let n1 = (d) * -1
+            d = n1
         }
         if b.frame.intersects(bw2.frame) {
-            let n = (d) * -1
-            d = n
+            let n2 = (d) * -1
+            d = n2
+        }
+        if b.frame.intersects(car1.frame) {
+            let c1 = (d) * -1
+            d = c1
+        }
+        if b.frame.intersects(car2.frame) {
+            let c2 = (d) * -1
+            d = c2
+        }
+        if b.frame.intersects(car3.frame) {
+            let c3 = (d) * -1
+            d = c3
         }
         return [__sinpi(Double(d/180.0)), __cospi(Double(d/180.0))]
     }
